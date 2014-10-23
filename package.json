@@ -1,5 +1,5 @@
 {
-  "name": "gitter-chat-processor",
+  "name": "gitter-markdown-processor",
   "version": "0.0.0",
   "description": "parses gitter chat messages, but in its own process",
   "main": "index.js",

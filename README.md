@@ -1,4 +1,4 @@
-gitter-chat-processor
+gitter-markdown-processor
 =====================
 
 Processes Gitter markdown messages and returns html with metadata.
