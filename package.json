@@ -9,7 +9,6 @@
     "htmlencode": "0.0.4",
     "katex": "0.1.0",
     "q": "^1.0.1",
-    "shutdown": "^0.2.3",
     "statuserror": "0.0.1",
     "underscore": "^1.7.0",
     "worker-farm": "^1.0.1"
