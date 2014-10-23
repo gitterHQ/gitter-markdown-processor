@@ -10,7 +10,7 @@ processor.parse('Can someone look at #12?', function(err, result) {
   
 });
 
-processor.cleanup(function(err) {
+processor.shutdown(function(err) {
   if(err) console.error('Uh oh, you should check for leftover processes', err);
 });
 

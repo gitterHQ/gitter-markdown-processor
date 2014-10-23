@@ -3,7 +3,7 @@
 "use strict";
 
 var assert = require('assert');
-var processChat = require('..');
+var Processor = require('..');
 var fs = require('fs');
 var path = require('path');
 
@@ -34,14 +34,20 @@ function listTestPairs() {
 }
 
 describe('process-chat', function() {
+  var processor = new Processor();
+
   after(function(callback) {
-    processChat.testOnly.shutdown(callback);
+    processor.shutdown(function() {
+      // Add an extra time on cos mocha will just exit without waiting
+      // for the child to shutdown
+      setTimeout(callback, 150);
+    });
   });
 
   describe('tests', function() {
     listTestPairs().forEach(function(item) {
       it('should handle ' + item.name, function(done) {
-        processChat(item.markdown, function(err, result) {
+        processor.process(item.markdown, function(err, result) {
           if(err) return done(err);
 
           var html = result.html;
@@ -57,7 +63,7 @@ describe('process-chat', function() {
       it('should handle ' + item.name, function(done) {
         var completed = 0;
         for(var i = 0; i < 1000; i++) {
-          processChat(item.markdown, function(err, result) {
+          processor.process(item.markdown, function(err, result) {
             completed++;
             if(err) return done(err);
 
