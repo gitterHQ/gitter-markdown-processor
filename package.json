@@ -19,6 +19,24 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "",
-  "license": "MIT"
+  "author": "Andy Trevorah",
+  "license": "MIT",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitterHQ/gitter-markdown-processor.git"
+  },
+  "keywords": [
+    "gitter",
+    "markdown",
+    "process",
+    "parse",
+    "github"
+  ],
+  "bugs": {
+    "url": "https://github.com/gitterHQ/gitter-markdown-processor/issues"
+  },
+  "homepage": "https://github.com/gitterHQ/gitter-markdown-processor"
 }
