@@ -1,5 +1,5 @@
 gitter-markdown-processor
-=====================
+=========================
 
 Processes Gitter markdown messages and returns html with metadata.
 
@@ -23,3 +23,10 @@ processor.shutdown(function(err) {
 });
 
 ```
+
+Versioning
+----------
+
+In order to make versioning of messages easier, any change to the output of `processor.parse()` is a breaking change. This means that under semver, we will release a new major version.
+
+Its also why the first public release of this module is version `7.0.0`.
