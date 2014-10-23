@@ -1,0 +1,25 @@
+{
+  "name": "gitter-chat-processor",
+  "version": "0.0.0",
+  "description": "parses gitter chat messages, but in its own process",
+  "main": "index.js",
+  "dependencies": {
+    "gitter-marked": "^0.8.0",
+    "highlight.js": "git://github.com/gitterHQ/highlight.js#6523cbb6e3f2a9374ea96e82f977ef57ef8cdf59",
+    "htmlencode": "0.0.4",
+    "katex": "0.1.0",
+    "q": "^1.0.1",
+    "shutdown": "^0.2.3",
+    "statuserror": "0.0.1",
+    "underscore": "^1.7.0",
+    "worker-farm": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^2.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "MIT"
+}
