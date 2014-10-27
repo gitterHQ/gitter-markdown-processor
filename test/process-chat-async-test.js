@@ -56,6 +56,22 @@ describe('process-chat-async', function() {
       .nodeify(done);
   });
 
+  it('should detect chinese (simplified)', function(done) {
+    processChatAsync("您好，欢迎来到小胶质")
+      .then(function(result) {
+        assert.equal(result.lang, 'zh');
+      })
+      .nodeify(done);
+  });
+
+  it('should detect chinese (traditional)', function(done) {
+    processChatAsync("您好，歡迎來到小膠質")
+      .then(function(result) {
+        assert.equal(result.lang, 'zh-Hant');
+      })
+      .nodeify(done);
+  });
+
   it('should detect afrikaans', function(done) {
     processChatAsync("hoe is jy meneer?")
       .then(function(result) {
