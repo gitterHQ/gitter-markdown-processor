@@ -51,12 +51,17 @@ describe('process-chat-async', function() {
     processChatAsync("Привет мир , как ты?")
       .then(function(result) {
         assert.equal(result.lang, 'ru');
+        return processChatAsync("1. Привет мир , как ты?");
       })
       .nodeify(done);
   });
 
   it('should detect afrikaans', function(done) {
     processChatAsync("hoe is jy meneer?")
+      .then(function(result) {
+        assert.equal(result.lang, 'af');
+        return processChatAsync("## hoe is jy meneer?");
+      })
       .then(function(result) {
         assert.equal(result.lang, 'af');
       })
