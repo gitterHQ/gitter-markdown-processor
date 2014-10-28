@@ -100,4 +100,9 @@ describe('process-chat-async', function() {
       .nodeify(done);
   });
 
+  it('should handle null', function(done) {
+    return processChatAsync(null)
+      .nodeify(done);
+  });
+
 });
