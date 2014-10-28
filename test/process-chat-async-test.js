@@ -84,4 +84,12 @@ describe('process-chat-async', function() {
       .nodeify(done);
   });
 
+  it('should deal with unreliable text snippets', function(done) {
+    return processChatAsync("あ、app/assets/javascripts/main.js は requirejs.config なんですか")
+      .then(function(result) {
+        assert.equal(result.lang, 'ja');
+      })
+      .nodeify(done);
+  });
+
 });
