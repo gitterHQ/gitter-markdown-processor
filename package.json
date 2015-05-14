@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "gitter-marked": "^0.9.0",
-    "highlight.js": "git://github.com/gitterHQ/highlight.js#6523cbb6e3f2a9374ea96e82f977ef57ef8cdf59",
+    "highlight.js": "~8.5.0",
     "htmlencode": "0.0.4",
     "katex": "0.1.0",
     "q": "^1.0.1",
