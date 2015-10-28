@@ -19,7 +19,6 @@ describe('process-chat', function() {
     var htmlFile = markdownFile.replace('.markdown', '.html');
     var markdown = fs.readFileSync(markdownFile, { encoding: 'utf8' });
     var expectedHtml = fs.readFileSync(htmlFile, { encoding: 'utf8' });
-
     it('should handle ' + file, function() {
       var html = processChat(markdown).html;
       assert.equal(html.trim(), expectedHtml.trim());

@@ -1,13 +1,13 @@
 {
   "name": "gitter-markdown-processor",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "parses gitter chat messages, but in its own process",
   "main": "index.js",
   "dependencies": {
     "gitter-marked": "^0.9.0",
     "highlight.js": "~8.5.0",
     "htmlencode": "0.0.4",
-    "katex": "~0.4.3",
+    "katex": "~0.5.1",
     "q": "^1.0.1",
     "statuserror": "0.0.1",
     "underscore": "^1.7.0",
