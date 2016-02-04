@@ -4,15 +4,15 @@
   "description": "parses gitter chat messages, but in its own process",
   "main": "index.js",
   "dependencies": {
+    "bluebird": "^3.2.1",
+    "cld": "^2.2.0",
     "gitter-marked": "^0.9.0",
     "highlight.js": "~8.5.0",
     "htmlencode": "0.0.4",
     "katex": "~0.5.1",
-    "q": "^1.0.1",
     "statuserror": "0.0.1",
     "underscore": "^1.7.0",
-    "worker-farm": "^1.0.1",
-    "cld": "^2.2.0"
+    "worker-farm": "^1.0.1"
   },
   "devDependencies": {
     "mocha": "^2.0.1"
