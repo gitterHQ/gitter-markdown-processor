@@ -6,7 +6,7 @@
   "dependencies": {
     "bluebird": "^3.2.1",
     "cld": "^2.2.0",
-    "gitter-marked": "^0.9.0",
+    "gitter-marked": "^0.9.1",
     "highlight.js": "~8.5.0",
     "htmlencode": "0.0.4",
     "katex": "~0.5.1",
