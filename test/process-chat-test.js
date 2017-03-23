@@ -26,4 +26,14 @@ describe('process-chat', function() {
 
   });
 
+  it('should isolate link references between messages', function() {
+    var inputMd1 = '[Community for developers to chat][1]\n\n[1]: https://gitter.im/';
+    var inputMd2 = 'arr[1]';
+    var html1 = processChat(inputMd1).html;
+    assert.equal(html1.trim(), '<a href="https://gitter.im/" rel="nofollow" target="_blank" class="link">Community for developers to chat</a>');
+    var html2 = processChat(inputMd2).html;
+    assert.equal(html2.trim(), 'arr[1]');
+  });
+
+
 });
